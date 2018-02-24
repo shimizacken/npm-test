@@ -1,6 +1,6 @@
 <div align='center'>
   <h1>
-    npm-test
+    loc-ui
   </h1>
 </div>
 
@@ -10,7 +10,7 @@ usage:
 
 install:
 ```bash
-npm i --save sz-npm-test
+npm i --save loc-ui
 ```
 
 use:
