@@ -2,22 +2,20 @@
 
 let path = require('path');
 let webpack = require('webpack');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let WebpackCleanupPlugin = require('webpack-cleanup-plugin');
-let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let loaders = require('./webpack.loaders');
 
-const PORT = 8282;
 
 module.exports = {
     entry: [
-        'webpack-dev-server/client?http://localhost:' + PORT + '/',
         './src/app.js'
     ],
     output: {
-        publicPath: './',
-        path: path.resolve('public'),
-        filename: 'bundle-[chunkhash].js'
+        path: path.resolve('build'),
+        filename: 'index.js',
+        libraryTarget: 'umd'
     },
     resolve: {
         extensions: ['.js', '.jsx', '.webpack.js', '.web.js'],
@@ -27,12 +25,8 @@ module.exports = {
         rules: loaders
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.production.html',
-            files: {
-                css: ['style.css'],
-                js: ['bundle.js'],
-            }
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
         }),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: true,
@@ -48,5 +42,15 @@ module.exports = {
             allChunks: true
         }),
         new WebpackCleanupPlugin()
-    ]
+    ],
+    externals: [
+        {
+          react: {
+            root: 'React',
+            commonjs2: 'react',
+            commonjs: 'react',
+            amd: 'react'
+          }
+        }
+      ]
 };

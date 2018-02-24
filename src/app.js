@@ -1,10 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import MainWrapper from './components/mainWrapper';
+import React, { Component } from 'react';
 
-import './styles/main.scss';
+export class MyButton extends Component {
 
-ReactDOM.render(
-  <MainWrapper />,
-  document.getElementById('root')
-);
+  render() {
+
+    return(
+      <button onClick={this.props.onClick}>
+          {this.props.text}
+      </button>
+    );
+  }
+}
