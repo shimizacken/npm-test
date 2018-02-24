@@ -1,10 +1,10 @@
 <div align='center'>
   <h1>
-    :fire: webpack-react-boilerplate :fire:
+    :fire: npm-test :fire:
   </h1>
 </div>
 
-Simple `React` `webpack` web app for training
+Simple `npm` library
 
 <h2>
   usage
@@ -12,25 +12,10 @@ Simple `React` `webpack` web app for training
 
 clone to local folder:
 ```bash
-git clone https://github.com/shimizacken/webpack-react-boilerplate.git
+git clone https://github.com/shimizacken/npm-test.git
 ```
 
 install:
 ```bash
-npm install
-```
-
-run the webapp:
-```bash
-npm start
-```
-
-build:
-```bash
-npm run build-dev
-```
-
-build for production:
-```bash
-npm run build-prod
+npm i --save sz-npm-test
 ```

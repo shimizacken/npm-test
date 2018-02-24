@@ -1,8 +1,8 @@
 {
-  "name": "webpack-react-boilerplate",
+  "name": "npm-test",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "build/index.js",
   "scripts": {
     "start": "npm-run-all webpack-dev-derver",
     "webpack": "webpack --config=./webpack/webpack.dev.config",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shimizacken/webpack-react-boilerplate.git"
+    "url": "git+https://github.com/shimizacken/npm-test.git"
   },
   "author": "Shimi Zacken",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shimizacken/webpack-react-boilerplate/issues"
+    "url": "https://github.com/shimizacken/npm-test/issues"
   },
-  "homepage": "https://github.com/shimizacken/webpack-react-boilerplate#readme",
+  "homepage": "https://github.com/shimizacken/npm-test#readme",
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
