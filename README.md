@@ -1,8 +1,4 @@
-<div align='center'>
-  <h1>
-    loc-ui
-  </h1>
-</div>
+# loc-ui
 
 Simple `npm` library for learning purposes
 
